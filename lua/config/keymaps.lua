@@ -11,3 +11,11 @@ vim.keymap.set("i", "<A-k>", "<esc>gk", { desc = "Move up" })
 vim.keymap.set("i", "<A-j>", "<esc>gj", { desc = "Move down" })
 vim.keymap.set("v", "<A-k>", "<esc>gk", { desc = "Move up" })
 vim.keymap.set("v", "<A-j>", "<esc>gj", { desc = "Move down" })
+
+-- Undotree keymaps Toggle and Focus in one
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>", { desc = "Toggle undotree" })
+vim.keymap.set("n", "<leader>U", ":UndotreeFocus<CR>", { desc = "Focus undotree" })
+
+vim.keymap.set("i", "<C-w>", function()
+  require("supermaven").accept_word()
+end, { noremap = true, silent = true, desc = "Supermaven Accept Word" })
