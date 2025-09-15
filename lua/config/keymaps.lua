@@ -19,3 +19,6 @@ vim.keymap.set("n", "<leader>U", ":UndotreeFocus<CR>", { desc = "Focus undotree"
 vim.keymap.set("i", "<C-w>", function()
   require("supermaven").accept_word()
 end, { noremap = true, silent = true, desc = "Supermaven Accept Word" })
+
+-- Format with npm run format
+vim.keymap.set("n", "<leader>rf", ":!npm run format<CR>", { desc = "Run npm format" })
