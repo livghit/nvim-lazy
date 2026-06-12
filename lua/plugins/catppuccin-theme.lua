@@ -1,6 +1,7 @@
 return {
   "catppuccin/nvim",
   name = "catppuccin",
+  enabled = false,
   priority = 1000,
   opts = {
     flavour = "mocha",
@@ -72,6 +73,12 @@ return {
         Pmenu = { bg = "NONE" },
         SignColumn = { bg = "NONE" },
         WinSeparator = { fg = colors.surface1, bg = "NONE" },
+        BlinkCmpMenu = { bg = "NONE" },
+        BlinkCmpMenuBorder = { fg = colors.blue, bg = "NONE" },
+        BlinkCmpDoc = { bg = "NONE" },
+        BlinkCmpDocBorder = { fg = colors.blue, bg = "NONE" },
+        BlinkCmpSignatureHelp = { bg = "NONE" },
+        BlinkCmpSignatureHelpBorder = { fg = colors.blue, bg = "NONE" },
       }
     end,
   },
