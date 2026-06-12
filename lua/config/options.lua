@@ -4,3 +4,6 @@
 -- disable relative line numbers
 local opt = vim.opt
 opt.relativenumber = false
+
+-- keep terminal background visible with transparent themes
+opt.cursorlineopt = "number"

@@ -3,9 +3,76 @@ return {
   name = "catppuccin",
   priority = 1000,
   opts = {
+    flavour = "mocha",
     transparent_background = true,
-    styles = {
-      transparency = true,
+    dim_inactive = {
+      enabled = false,
+      shade = "dark",
+      percentage = 0.12,
     },
+    styles = {
+      comments = { "italic" },
+      conditionals = { "italic" },
+      loops = {},
+      functions = {},
+      keywords = { "italic" },
+      strings = {},
+      variables = {},
+      numbers = {},
+      booleans = {},
+      properties = {},
+      types = {},
+    },
+    integrations = {
+      blink_cmp = true,
+      cmp = true,
+      gitsigns = true,
+      illuminate = true,
+      indent_blankline = {
+        enabled = true,
+        scope_color = "lavender",
+        colored_indent_levels = false,
+      },
+      lsp_trouble = true,
+      mason = true,
+      mini = true,
+      native_lsp = {
+        enabled = true,
+        underlines = {
+          errors = { "undercurl" },
+          hints = { "undercurl" },
+          warnings = { "undercurl" },
+          information = { "undercurl" },
+        },
+        inlay_hints = {
+          background = true,
+        },
+      },
+      neotree = true,
+      noice = true,
+      notify = true,
+      snacks = true,
+      telescope = {
+        enabled = true,
+      },
+      treesitter = true,
+      which_key = true,
+    },
+    custom_highlights = function(colors)
+      return {
+        CursorLine = { bg = "NONE" },
+        EndOfBuffer = { bg = "NONE" },
+        FloatBorder = { fg = colors.blue, bg = "NONE" },
+        FoldColumn = { bg = "NONE" },
+        LineNr = { bg = "NONE" },
+        NonText = { bg = "NONE" },
+        Normal = { bg = "NONE" },
+        NormalFloat = { bg = "NONE" },
+        NormalNC = { bg = "NONE" },
+        Pmenu = { bg = "NONE" },
+        SignColumn = { bg = "NONE" },
+        WinSeparator = { fg = colors.surface1, bg = "NONE" },
+      }
+    end,
   },
 }
